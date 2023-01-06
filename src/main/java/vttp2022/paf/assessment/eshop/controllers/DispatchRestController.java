@@ -24,10 +24,13 @@ public class DispatchRestController {
         String name = form.getFirst("name");
         String address = form.getFirst("address");
         String email = form.getFirst("email");
-        LineItem li = new LineItem(
-            name, 
+        Order o = new Order(
+            item, Integer.parseInt(quantity)
         );
-        Order dispatchedOrder = orderRepo.saveOrderDetails
+        String createdBy = "JianJie";
+        Order updatedOrder = orderRepo.saveOrderDetails(o);
+        model.addAttribute(, )
+        
         
     }
 }
